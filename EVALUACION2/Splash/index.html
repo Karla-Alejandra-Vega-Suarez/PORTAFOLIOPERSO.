@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Mi sitio Web</title>
+</head>
+
+<body>
+  <div id="splash-screen">
+    <div id="loading-icon"></div>
+    <p>Cargando.....</p>
+  </div>
+
+  <div id="home-screen" class="hidden">
+    <h1>Bienvenido a Mi Aplicación</h1>
+    <button id="start-button">Comenzar</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+        console.log('Service worker registrado con éxito:',
+          registration);
+
+      }).catch(function(error) {
+        console.log('Error al registrar el Service worker:', error);
+      });
+    }
+
+    document.getElementById("start-button").addEventListener("click", function() {
+      window.location.href = "/portafolioP/index.html";
+    });
+  </script>
+</body>
+</html>

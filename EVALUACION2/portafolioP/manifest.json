@@ -1,0 +1,16 @@
+{
+    "name": "Portafolio Dinamico - Karla Vega",
+    "short_name": "Portafolio",
+    "description": "Portafolio de Karla Vega, desarrolladora web.",
+    "icons": [
+        {
+            "src": "img/logo-karla.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#d29bfd",
+    "background_color": "#ffffff"
+}
